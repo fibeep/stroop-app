@@ -13,6 +13,7 @@
 		E902CDD3256FFEE7000EB190 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E902CDD1256FFEE7000EB190 /* Main.storyboard */; };
 		E902CDD5256FFEE8000EB190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E902CDD4256FFEE8000EB190 /* Assets.xcassets */; };
 		E902CDD8256FFEE8000EB190 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E902CDD6256FFEE8000EB190 /* LaunchScreen.storyboard */; };
+		E9162E30257F0C930007FF24 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9162E2F257F0C930007FF24 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E902CDD4256FFEE8000EB190 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E902CDD7256FFEE8000EB190 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E902CDD9256FFEE8000EB190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9162E2F257F0C930007FF24 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				E902CDCD256FFEE7000EB190 /* SceneDelegate.swift */,
 				E902CDCF256FFEE7000EB190 /* ViewController.swift */,
 				E902CDD1256FFEE7000EB190 /* Main.storyboard */,
+				E9162E2F257F0C930007FF24 /* HomeScreen.swift */,
 				E902CDD4256FFEE8000EB190 /* Assets.xcassets */,
 				E902CDD6256FFEE8000EB190 /* LaunchScreen.storyboard */,
 				E902CDD9256FFEE8000EB190 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9162E30257F0C930007FF24 /* HomeScreen.swift in Sources */,
 				E902CDD0256FFEE7000EB190 /* ViewController.swift in Sources */,
 				E902CDCC256FFEE7000EB190 /* AppDelegate.swift in Sources */,
 				E902CDCE256FFEE7000EB190 /* SceneDelegate.swift in Sources */,

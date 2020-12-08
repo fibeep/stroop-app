@@ -58,16 +58,35 @@ extension ColorOption: CaseIterable{
 class ViewController: UIViewController {
     
     var score = 0
+    var streak_count = 0
+    
     
     
     @IBOutlet weak var meaning: UILabel!
     
     @IBOutlet weak var realColor: UILabel!
     
+    @IBOutlet weak var streak: UILabel!
     @IBOutlet weak var totalScore: UILabel!
     
+    @IBOutlet weak var timerLabel: UILabel!
     var topColor : ColorOption!
     var bottomcolor : ColorOption!
+    let time = 5
+    func createTimer(){
+        var runCount = 0
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            runCount += 1
+            self.timerLabel.text = "Time left: \(self.time-runCount)"
+            if runCount == self.time {
+                timer.invalidate()
+                self.score = 0
+                self.totalScore.text = "Score is: \(self.score)"
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
+    
     
     func randomize(){
         
@@ -76,27 +95,34 @@ class ViewController: UIViewController {
         
         meaning.text = topColor.text
         realColor.textColor = bottomcolor.textColor
+        realColor.text = topColor.text
     }
     
     @IBAction func noButton(_ sender: Any) {
         if topColor == bottomcolor {
             score -= 5
+            streak_count = 0
         } else {
             score += 10
+            streak_count += 1
         }
         randomize()
         totalScore.text = "Score is: \(score)"
+        streak.text = "Streak: \(streak_count)"
     }
     
     
     @IBAction func yesButton(_ sender: Any) {
         if topColor != bottomcolor {
             score -= 5
+            streak_count = 0
         } else {
             score += 10
+            streak_count += 1
         }
         randomize()
         totalScore.text = "Score is: \(score)"
+        streak.text = "Streak: \(streak_count)"
         
     }
     
@@ -104,6 +130,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createTimer()
         
     }
     
