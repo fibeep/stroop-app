@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     var topColor : ColorOption!
     var bottomcolor : ColorOption!
-    let time = 5
+    let time = 60
     func createTimer(){
         var runCount = 0
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
